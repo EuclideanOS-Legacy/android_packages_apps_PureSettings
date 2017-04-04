@@ -31,7 +31,7 @@ import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
 
 import com.android.internal.logging.MetricsProto.MetricsEvent;
-import com.android.internal.util.omni.PackageUtils;
+import com.android.internal.util.purenexus.PUREUtils;
 import com.android.internal.widget.LockPatternUtils;
 
 import com.android.settings.R;
@@ -269,7 +269,7 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
     }
 
     private boolean isOmniJawsServiceInstalled() {
-        return PackageUtils.isAvailableApp(WEATHER_SERVICE_PACKAGE, getActivity());
+        return PUREUtils.isAvailableApp(WEATHER_SERVICE_PACKAGE, getActivity());
     }
 
     private void updatePulldownSummary(int value) {
